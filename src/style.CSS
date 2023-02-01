@@ -61,3 +61,32 @@ h1 {
 .score li:nth-child(odd) {
     background: rgb(198, 197, 197);
 }
+
+/* Name input section */
+
+.names-container {
+    background: blue;
+    width: 40%;
+}
+
+.names-container h2 {
+    text-align: center;
+}
+
+.names-container form {
+    background: #000;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.names-container input {
+    width: 45%;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.names-container button {
+    padding: 6px;
+}
