@@ -79,9 +79,10 @@ A commandline interface e.g Gitbash
 ### Usage
 
 To run the project, execute the following command:
+`npm run build`
 
 To run the project, execute the following command:
-Click on the live server button on your IDE
+Open the html file in the dist folder.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
