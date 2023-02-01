@@ -79,7 +79,8 @@ A commandline interface e.g Gitbash
 ### Usage
 
 To run the project, execute the following command:
-`npm run build`
+`npm install`
+`npm start`
 
 To run the project, execute the following command:
 Open the html file in the dist folder.
