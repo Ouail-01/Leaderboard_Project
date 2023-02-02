@@ -53,7 +53,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Coming soon!!
+> [Live Demo Link](https://ouail-01.github.io/Leaderboard_Project/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -39,19 +39,19 @@ h1 {
   padding: 6px;
 }
 
-.score {
+#score {
   margin: 30px auto;
   width: 70%;
   border: 3px solid #000;
 }
 
-.score li {
+#score h4 {
   background: rgb(241, 241, 241);
   list-style: none;
   font-size: 20px;
 }
 
-.score li:nth-child(odd) {
+#score h4:nth-child(odd) {
   background: rgb(198, 197, 197);
 }
 
