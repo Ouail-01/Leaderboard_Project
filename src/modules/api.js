@@ -13,5 +13,12 @@ const leaderboard = async (userName, userScore) => {
     const jsonData = await results.json();
     return jsonData;
 }
+const dynUsers = (i, cnt) => {
+    let players = '';
+    i.forEach((player) => {
+        players += `<h4>${player.user} : ${player.score}</h4>`
+    });
+    cnt.innerHTML = players;
+}
 
-export {leaderboard};
+export {leaderboard, dynUsers};
