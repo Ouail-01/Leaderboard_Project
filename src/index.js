@@ -5,6 +5,7 @@ import postScore from './modules/score';
 const playerName = document.querySelector('#player-name');
 const playerScore = document.querySelector('#player-score');
 const score = document.querySelector('#score');
+const refresh = document.querySelector('#refresh');
 const submit = document.querySelector('#submit');
 
 submit.addEventListener('click', (e) => {
@@ -19,3 +20,9 @@ submit.addEventListener('click', (e) => {
         playerScore.value = '';
     }
 })
+
+refresh.addEventListener('click', () => {
+    window.location.reload();
+});
+
+postScore(score);
