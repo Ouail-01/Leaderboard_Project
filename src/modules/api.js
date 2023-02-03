@@ -1,4 +1,4 @@
-import userProfile from '../img/classement.png';
+import userClass from '../img/classement.png';
 
 const leaderboard = async (userName, userScore) => {
   const results = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/XpNfvUYHUwTMbBN5edTb/scores/', {
@@ -17,7 +17,7 @@ const leaderboard = async (userName, userScore) => {
 };
 const dynUsers = (i, cnt) => {
   let players = '';
-  const leadrClassement = userProfile;
+  const leadrClassement = userClass;
   let classment = 1;
   i.forEach((player) => {
     players += `<div class="player">

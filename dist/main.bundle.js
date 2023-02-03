@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/api */ \"./src/modules/api.js\");\n/* harmony import */ var _modules_score__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/score */ \"./src/modules/score.js\");\n\n\n\n\nconst playerName = document.querySelector('#player-name');\nconst playerScore = document.querySelector('#player-score');\nconst score = document.querySelector('#score');\nconst refresh = document.querySelector('#refresh');\nconst submit = document.querySelector('#submit');\n\nsubmit.addEventListener('click', (e) => {\n    e.preventDefault();\n    if(playerName.value === '' || playerScore.value === '') {\n        playerName.reportValidity();\n        playerScore.reportValidity();\n    }else {\n        (0,_modules_api__WEBPACK_IMPORTED_MODULE_1__.leaderboard)(playerName.value, playerScore.value);\n        (0,_modules_score__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(score);\n        playerName.value = '';\n        playerScore.value = '';\n    }\n})\n\nrefresh.addEventListener('click', () => {\n    window.location.reload();\n});\n\n(0,_modules_score__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(score);\n\n//# sourceURL=webpack://leaderbord_project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/api.js */ \"./src/modules/api.js\");\n/* harmony import */ var _modules_score_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/score.js */ \"./src/modules/score.js\");\n\n\n\n\nconst playerName = document.querySelector('#player-name');\nconst playerScore = document.querySelector('#player-score');\nconst score = document.querySelector('#score');\nconst refresh = document.querySelector('#refresh');\nconst submit = document.querySelector('#submit');\n\nsubmit.addEventListener('click', (e) => {\n  e.preventDefault();\n  if (playerName.value === '' || playerScore.value === '') {\n    playerName.reportValidity();\n    playerScore.reportValidity();\n  } else {\n    (0,_modules_api_js__WEBPACK_IMPORTED_MODULE_1__.leaderboard)(playerName.value, playerScore.value);\n    (0,_modules_score_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(score);\n    playerName.value = '';\n    playerScore.value = '';\n  }\n});\n\nrefresh.addEventListener('click', () => {\n  window.location.reload();\n});\n\n(0,_modules_score_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(score);\n\n//# sourceURL=webpack://leaderbord_project/./src/index.js?");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"dynUsers\": () => (/* binding */ dynUsers),\n/* harmony export */   \"leaderboard\": () => (/* binding */ leaderboard)\n/* harmony export */ });\nconst leaderboard = async (userName, userScore) => {\n    const results = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/XpNfvUYHUwTMbBN5edTb/scores/', {\n        method: 'POST',\n        headers: {\n            'Content-Type': 'application/json; charset=utf-8',\n        },\n        body: JSON.stringify ({\n            user : userName,\n            score : userScore,\n        }),\n    })\n\n    const jsonData = await results.json();\n    return jsonData;\n}\nconst dynUsers = (i, cnt) => {\n    let players = '';\n    i.forEach((player) => {\n        players += `<h4>${player.user} : ${player.score}</h4>`\n    });\n    cnt.innerHTML = players;\n}\n\n\n\n//# sourceURL=webpack://leaderbord_project/./src/modules/api.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"dynUsers\": () => (/* binding */ dynUsers),\n/* harmony export */   \"leaderboard\": () => (/* binding */ leaderboard)\n/* harmony export */ });\n/* harmony import */ var _img_classement_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/classement.png */ \"./src/img/classement.png\");\n\n\nconst leaderboard = async (userName, userScore) => {\n  const results = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/XpNfvUYHUwTMbBN5edTb/scores/', {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json; charset=utf-8',\n    },\n    body: JSON.stringify({\n      user: userName,\n      score: userScore,\n    }),\n  });\n\n  const jsonData = await results.json();\n  return jsonData;\n};\nconst dynUsers = (i, cnt) => {\n  let players = '';\n  const leadrClassement = _img_classement_png__WEBPACK_IMPORTED_MODULE_0__;\n  let classment = 1;\n  i.forEach((player) => {\n    players += `<div class=\"player\">\n      <div class=\"classement\">\n      <img src=\"${leadrClassement}\" alt=\"\">\n        <p>${classment++}</p>\n      </div>\n      <h3>${player.user}</h3>\n      <h4>${player.score}</h4>\n    </div>`;\n  });\n  cnt.innerHTML = players;\n};\n\n\n\n//# sourceURL=webpack://leaderbord_project/./src/modules/api.js?");
 
 /***/ }),
 
@@ -136,7 +136,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api */ \"./src/modules/api.js\");\n\nconst postScore = async (cnt) => {\n    const results = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/XpNfvUYHUwTMbBN5edTb/scores/');\n    const jsonData = await results.json();\n    const arr = jsonData.result.sort((a,b) => b.score - a.score);\n    (0,_api__WEBPACK_IMPORTED_MODULE_0__.dynUsers)(arr, cnt);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (postScore);\n\n//# sourceURL=webpack://leaderbord_project/./src/modules/score.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api.js */ \"./src/modules/api.js\");\n\n\nconst postScore = async (cnt) => {\n  const results = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/XpNfvUYHUwTMbBN5edTb/scores/');\n  const jsonData = await results.json();\n  const arr = jsonData.result.sort((a, b) => b.score - a.score);\n  (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.dynUsers)(arr, cnt);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (postScore);\n\n//# sourceURL=webpack://leaderbord_project/./src/modules/score.js?");
+
+/***/ }),
+
+/***/ "./src/img/classement.png":
+/*!********************************!*\
+  !*** ./src/img/classement.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"a833276050e6dd8d3f5f.png\";\n\n//# sourceURL=webpack://leaderbord_project/./src/img/classement.png?");
 
 /***/ })
 
@@ -191,6 +201,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -205,6 +227,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
