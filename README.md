@@ -53,7 +53,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> [Live Demo Link](https://ouail-01.github.io/Leaderboard_Project/dist/)
+> [Live Demo Link](https://ouail-01.github.io/Leaderboard_Project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,6 +110,7 @@ Open the html file in the dist folder.
 
 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](https://github.com/Ouail-01/Leaderboard_Project/issues).
 
 <p align="right"><p align="right">(<a href="#readme-top"><a href="#readme-top">back to top</a></a>)</p></p>
 
