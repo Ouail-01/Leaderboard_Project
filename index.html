@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+<script defer src="main.bundle.js"></script></head>
+<body>
+    <h1>Leaderboard</h1>
+    <section class="container">
+        <!-- Score section -->
+        <div class="score-container">
+            <div class="score-title">
+                <h2>Recent scores :</h2>
+                <button id="refresh">Refresh</button>
+            </div>
+            <div class="score" id="score">
+                <!-- Add the score dynamically -->
+            </div>
+        </div>
+        <!-- Name input section -->
+        <div class="names-container">
+            <h2>Add your score :</h2>
+            <form action="">
+                <input type="text" id="player-name" placeholder="Your name" required>
+                <input type="number" id="player-score" placeholder="Your score" required>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>
