@@ -20,7 +20,7 @@ const dynUsers = (i, cnt) => {
   let players = '';
   const golde = gold;
   const silvere = silver;
-  let classment = 1;
+  let classment = 0;
   i.forEach((player) => {
     players += `<div class="player">
       <div class="classement">
