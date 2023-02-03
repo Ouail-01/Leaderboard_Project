@@ -7,13 +7,14 @@
 }
 
 body {
-  background-color: gray;
+  background: url(img/BgLeader.png);
 }
 
 h1 {
   text-align: center;
   margin-top: 40px;
   font-size: 50px;
+  color: wheat;
 }
 
 /* Score section */
