@@ -4,6 +4,8 @@
   "description": "",
   "private": "true",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -18,9 +20,10 @@
   "bugs": {
     "url": "https://github.com/Ouail-01/Leaderbord_Project/issues"
   },
-  "homepage": "https://github.com/Ouail-01/Leaderbord_Project#readme",
+  "homepage": "https://ouail-01.github.io/Leaderboard_Project/dist",
   "dependencies": {
     "css-loader": "^6.7.3",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",

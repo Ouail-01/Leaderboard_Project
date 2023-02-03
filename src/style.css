@@ -7,13 +7,14 @@
 }
 
 body {
-  background-color: gray;
+  background: url(img/BgLeader.png);
 }
 
 h1 {
   text-align: center;
   margin-top: 40px;
   font-size: 50px;
+  color: wheat;
 }
 
 /* Score section */
@@ -33,26 +34,66 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
+  color: #fff;
+}
+
+.score-title h2 {
+  font-size: 25px;
 }
 
 .score-title button {
   padding: 6px;
+  color: #bfb144;
+  border: 2px solid #bfb144;
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-#score {
+.score-title button:hover {
+  border: none;
+  background: #bfb144;
+  color: #fff;
+  transition: 0.5s ease;
+}
+
+.score {
+  background: #fff;
   margin: 30px auto;
   width: 70%;
-  border: 3px solid #000;
+  border-radius: 20px;
 }
 
-#score h4 {
-  background: rgb(241, 241, 241);
-  list-style: none;
-  font-size: 20px;
+.score .player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#score h4:nth-child(odd) {
-  background: rgb(198, 197, 197);
+.score .player:nth-child(odd) {
+  background: rgb(221, 221, 221);
+  border-radius: 17px;
+}
+
+.player .classement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  margin-left: 15px;
+}
+
+.player img {
+  height: 40px;
+}
+
+.player h4 {
+  margin-right: 15px;
+}
+
+.player p {
+  color: #897d25;
+  font-size: 10px;
 }
 
 /* Name input section */
@@ -63,6 +104,8 @@ h1 {
 
 .names-container h2 {
   text-align: center;
+  color: #fff;
+  font-size: 25px;
 }
 
 .names-container form {
@@ -76,8 +119,59 @@ h1 {
   width: 45%;
   margin-bottom: 20px;
   padding: 5px;
+  border-radius: 10px;
 }
 
-.names-container button {
-  padding: 6px;
+.names-container #submit {
+  padding: 6px 10px;
+  border-radius: 15px;
+  color: #bfb144;
+  border: 2px solid #bfb144;
+  background: transparent;
+  cursor: pointer;
+}
+
+.names-container #submit:hover {
+  border: none;
+  background: #bfb144;
+  color: #fff;
+  transition: 0.5s ease;
+}
+
+/* Mobile design version */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .container {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+  }
+
+  .score-container {
+    width: 100%;
+  }
+
+  .score-title {
+    width: 75%;
+  }
+
+  .score {
+    width: 85%;
+  }
+
+  .names-container {
+    width: 70%;
+    margin: auto;
+  }
+
+  .names-container input {
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 10px;
+  }
 }
