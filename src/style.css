@@ -37,23 +37,62 @@ h1 {
   color: #fff;
 }
 
+.score-title h2 {
+  font-size: 25px;
+}
+
 .score-title button {
   padding: 6px;
   color: #bfb144;
   border: 2px solid #bfb144;
   background: transparent;
   border-radius: 20px;
+  cursor: pointer;
+}
+.score-title button:hover {
+  border: none;
+  background: #bfb144;
+  color: #fff;
+  transition: 0.5s ease;
 }
 
 .score {
   background: #fff;
   margin: 30px auto;
   width: 70%;
-  border: 3px solid #000;
+  border-radius: 20px;
 }
 
 .score .player:nth-child(odd) {
-  background: rgb(198, 197, 197);
+  background: rgb(221, 221, 221);
+  border-radius: 17px;
+}
+
+.score .player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player .classement{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  margin-left: 15px;
+}
+
+.player img {
+  height: 40px;
+}
+
+.player h4 {
+  margin-right: 15px;
+}
+
+.player p {
+  color: #897d25;
+  font-size: 10px;
 }
 
 /* Name input section */
@@ -64,6 +103,8 @@ h1 {
 
 .names-container h2 {
   text-align: center;
+  color: #fff;
+  font-size: 25px;
 }
 
 .names-container form {
@@ -77,8 +118,20 @@ h1 {
   width: 45%;
   margin-bottom: 20px;
   padding: 5px;
+  border-radius: 10px;
 }
 
 .names-container button {
-  padding: 6px;
+  padding: 6px 10px;
+  border-radius: 15px;
+  color: #bfb144;
+  border: 2px solid #bfb144;
+  background: transparent;
+  cursor: pointer;
+}
+.names-container button:hover {
+  border: none;
+  background: #bfb144;
+  color: #fff;
+  transition: 0.5s ease;
 }
