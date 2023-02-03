@@ -49,6 +49,7 @@ h1 {
   border-radius: 20px;
   cursor: pointer;
 }
+
 .score-title button:hover {
   border: none;
   background: #bfb144;
@@ -63,18 +64,18 @@ h1 {
   border-radius: 20px;
 }
 
-.score .player:nth-child(odd) {
-  background: rgb(221, 221, 221);
-  border-radius: 17px;
-}
-
 .score .player {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.player .classement{
+.score .player:nth-child(odd) {
+  background: rgb(221, 221, 221);
+  border-radius: 17px;
+}
+
+.player .classement {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,7 +122,7 @@ h1 {
   border-radius: 10px;
 }
 
-.names-container button {
+.names-container #submit {
   padding: 6px 10px;
   border-radius: 15px;
   color: #bfb144;
@@ -129,7 +130,8 @@ h1 {
   background: transparent;
   cursor: pointer;
 }
-.names-container button:hover {
+
+.names-container #submit:hover {
   border: none;
   background: #bfb144;
   color: #fff;
@@ -139,41 +141,37 @@ h1 {
 /* Mobile design version */
 
 @media screen and (max-width: 768px) {
-  
-h1 {
-  font-size: 40px;
-}
-.container {
-  display: flex;
-  margin-top: 50px;
-}
+  h1 {
+    font-size: 40px;
+  }
 
-.container {
-  flex-direction: column;
-}
+  .container {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+  }
 
-.score-container {
-  width: 100%;
-}
+  .score-container {
+    width: 100%;
+  }
 
-.score-title {
-  width: 75%;
-}
+  .score-title {
+    width: 75%;
+  }
 
-.score {
-  width: 85%;
-}
+  .score {
+    width: 85%;
+  }
 
-.names-container {
-  width: 70%;
-  margin: auto;
-}
+  .names-container {
+    width: 70%;
+    margin: auto;
+  }
 
-.names-container input {
-  width: 80%;
-  margin-bottom: 20px;
-  padding: 5px;
-  border-radius: 10px;
-}
-
+  .names-container input {
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 10px;
+  }
 }
