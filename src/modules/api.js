@@ -24,7 +24,7 @@ const dynUsers = (i, cnt) => {
   i.forEach((player) => {
     players += `<div class="player">
       <div class="classement">
-      <img src="${classment <= 3 ? golde : silvere}" alt="">
+      <img src="${classment < 3 ? golde : silvere}" alt="">
         <p>${classment += 1}</p>
       </div>
       <h3>${player.user}</h3>
